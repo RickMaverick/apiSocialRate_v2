@@ -4,6 +4,8 @@ import com.example.apiSocialRate_v2.controller.dto.EventoDTO;
 import com.example.apiSocialRate_v2.model.Evento;
 import com.example.apiSocialRate_v2.repository.EventoRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -15,8 +17,13 @@ public class EventoService {
 
     public List<Evento> listarTodosEventos(){return eventoRepository.findAll();}
 
+    @Transactional(propagation = Propagation.REQUIRED)
     public Evento cadastrarEvento(EventoDTO eventoDTO){
         Evento novoEvento = new Evento(eventoDTO);
         return eventoRepository.save(novoEvento);
+    }
+
+    public void deletarEventoPorId(Long id){
+        eventoRepository.deleteById(id);
     }
 }

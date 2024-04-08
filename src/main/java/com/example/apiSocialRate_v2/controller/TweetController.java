@@ -4,6 +4,8 @@ import com.example.apiSocialRate_v2.controller.dto.TweetDTO;
 import com.example.apiSocialRate_v2.model.Tweet;
 import com.example.apiSocialRate_v2.service.TweetService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,5 +27,11 @@ public class TweetController {
     @PostMapping
     public ResponseEntity<Tweet> postTweet(@RequestBody TweetDTO tweetDTO){
         return ResponseEntity.ok(tweetService.cadastrarTweet(tweetDTO));
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteTweetPorId(@PathVariable Long id){
+        tweetService.deletarTweetPorId(id);
+        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
     }
 }

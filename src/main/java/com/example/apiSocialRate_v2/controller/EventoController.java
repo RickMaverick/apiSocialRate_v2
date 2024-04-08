@@ -4,6 +4,7 @@ import com.example.apiSocialRate_v2.controller.dto.EventoDTO;
 import com.example.apiSocialRate_v2.model.Evento;
 import com.example.apiSocialRate_v2.service.EventoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,4 +29,9 @@ public class EventoController {
         return ResponseEntity.ok(eventoService.cadastrarEvento(eventoDTO));
     }
 
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteEventoPorId(@PathVariable Long id){
+        eventoService.deletarEventoPorId(id);
+        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+    }
 }
