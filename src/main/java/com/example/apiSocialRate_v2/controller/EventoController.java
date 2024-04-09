@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/eventos")
@@ -27,6 +28,16 @@ public class EventoController {
     @PostMapping
     public ResponseEntity<Evento> postEvento(@RequestBody EventoDTO eventoDTO){
         return ResponseEntity.ok(eventoService.cadastrarEvento(eventoDTO));
+    }
+
+    @PutMapping("{id}")
+    public ResponseEntity<Evento>  updateEvento(@PathVariable Long id, @RequestBody EventoDTO eventoUpdate){
+        Optional<Evento> eventoAtualizado = eventoService.atualizarEvento(id, eventoUpdate);
+        if (eventoAtualizado.isPresent()) {
+            return ResponseEntity.ok(eventoAtualizado.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping("{id}")
