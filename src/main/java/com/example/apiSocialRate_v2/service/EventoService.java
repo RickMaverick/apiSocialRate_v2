@@ -15,15 +15,17 @@ public class EventoService {
 
     public EventoService(EventoRepository eventoRepository){this.eventoRepository = eventoRepository;}
 
+    //Lista eventos
     public List<Evento> listarTodosEventos(){return eventoRepository.findAll();}
 
+    // Cadastra evento
     @Transactional(propagation = Propagation.REQUIRED)
     public Evento cadastrarEvento(EventoDTO eventoDTO){
         Evento novoEvento = new Evento(eventoDTO);
         return eventoRepository.save(novoEvento);
     }
 
-    public void deletarEventoPorId(Long id){
-        eventoRepository.deleteById(id);
+    //Deleta eventos
+    public void deletarEventoPorId(Long id){eventoRepository.deleteById(id);
     }
 }
