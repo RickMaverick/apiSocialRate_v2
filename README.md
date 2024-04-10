@@ -1,4 +1,4 @@
-[Cadastra_Evento-1712706868276.json](https://github.com/RickMaverick/apiSocialRate_v2/files/14925280/Cadastra_Evento-1712706868276.json)# SOCIAL RATE
+# SOCIAL RATE
 
 ## INTEGRANTES DO GRUPO:
 
