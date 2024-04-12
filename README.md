@@ -1,4 +1,4 @@
-# SOCIAL RATE
+[response4.json](https://github.com/RickMaverick/apiSocialRate_v2/files/14964408/response4.json)[response3.json](https://github.com/RickMaverick/apiSocialRate_v2/files/14964292/response3.json)[responseGetEventos2.json](https://github.com/RickMaverick/apiSocialRate_v2/files/14964275/responseGetEventos2.json)# SOCIAL RATE
 
 ## INTEGRANTES DO GRUPO:
 
@@ -38,11 +38,80 @@ ENDPOINTS DA CLASSE TWEET:
 - DELETE http://localhost:8080/api/tweet/{id} 
 
 ## ANEXOS
-COMPROVANTES DA FUNCIONALIDADE DOS ENDPOINTS:
-- Criando 2 eventos distintos:
-![image](https://github.com/RickMaverick/apiSocialRate_v2/assets/122487111/adebd88f-d8ae-4b1e-b1fe-d2db4747fb94)
-![image](https://github.com/RickMaverick/apiSocialRate_v2/assets/122487111/fd407d6b-22d4-4bb7-9826-1d82de435efb)
-- Listando todos os Eventos:
-![image](https://github.com/RickMaverick/apiSocialRate_v2/assets/122487111/3df0affb-7ef3-4e09-bacb-0407ca9e0711)
-- Listando todos os Tweets:
-![image](https://github.com/RickMaverick/apiSocialRate_v2/assets/122487111/1f0c0ecc-a9a3-4e63-abb8-4ee6c4c88855)
+JSONS PARA TESTE:
+### Criando 2 eventos distintos:
+
+- {
+  "nomeEvento": "Amazing Tech Conference",
+  "setorEvento": "Technology",
+  "tweetsEvento": [
+    {
+      "textTweet": "Great presentations and workshops at #TechConf2024!",
+      "likeCountTweet": 120,
+      "replyCountTweet": 15,
+      "retweetsCountTweet": 28,
+      "langTweet": "en"
+    },
+    {
+      "textTweet": "Learning a lot about AI and machine learning here.",
+      "likeCountTweet": 45,
+      "replyCountTweet": 3,
+      "retweetsCountTweet": 6,
+      "langTweet": "en"
+    },
+    {
+      "textTweet": "Met some inspiring people in the tech industry.",
+      "likeCountTweet": 32,
+      "replyCountTweet": 2,
+      "retweetsCountTweet": 4,
+      "langTweet": "en"
+    }
+  ]
+}
+- {
+  "nomeEvento": "Global E-sports Championship",
+  "setorEvento": "Gaming",
+  "tweetsEvento": [
+    {
+      "textTweet": "Can't wait to see the finals of the GEC! #GEC2024",
+      "likeCountTweet": 5200,
+      "replyCountTweet": 780,
+      "retweetsCountTweet": 1450,
+      "langTweet": "en"
+    },
+    {
+      "textTweet": "Who do you think will win the championship? #TeamFire  #TeamStorm",
+      "likeCountTweet": 2100,
+      "replyCountTweet": 425,
+      "retweetsCountTweet": 870,
+      "langTweet": "en"
+    },
+    {
+      "textTweet": "Amazing atmosphere at the event! So much energy from the crowd. #GECRocks",
+      "likeCountTweet": 1800,
+      "replyCountTweet": 120,
+      "retweetsCountTweet": 350,
+      "langTweet": "en"
+    }
+  ]
+}
+
+LISTANDO OS EVENTOS
+- [responseGetEventos.json](https://github.com/RickMaverick/apiSocialRate_v2/files/14964211/responseGetEventos.json)
+[{"idEvento":1,"nomeEvento":"Amazing Tech Conference","setorEvento":"Technology","tweetsEvento":[{"idTweet":1,"textTweet":"Great presentations and workshops at #TechConf2024!","likeCountTweet":120,"replyCountTweet":15,"retweetsCountTweet":28,"langTweet":"en"},{"idTweet":2,"textTweet":"Learning a lot about AI and machine learning here.","likeCountTweet":45,"replyCountTweet":3,"retweetsCountTweet":6,"langTweet":"en"},{"idTweet":3,"textTweet":"Met some inspiring people in the tech industry.","likeCountTweet":32,"replyCountTweet":2,"retweetsCountTweet":4,"langTweet":"en"}]},{"idEvento":2,"nomeEvento":"Global E-sports Championship","setorEvento":"Gaming","tweetsEvento":[{"idTweet":4,"textTweet":"Can't wait to see the finals of the GEC! #GEC2024","likeCountTweet":5200,"replyCountTweet":780,"retweetsCountTweet":1450,"langTweet":"en"},{"idTweet":5,"textTweet":"Who do you think will win the championship? #TeamFire  #TeamStorm","likeCountTweet":2100,"replyCountTweet":425,"retweetsCountTweet":870,"langTweet":"en"},{"idTweet":6,"textTweet":"Amazing atmosphere at the event! So much energy from the crowd. #GECRocks","likeCountTweet":1800,"replyCountTweet":120,"retweetsCountTweet":350,"langTweet":"en"}]}]
+
+ATUALIZANDO (PUT) NOME DO EVENTO DE ID 1 PELO ID
+- {
+  "nomeEvento": "Global Counter Strike 2 Championship",
+  "setorEvento": "Gaming",
+  "tweetsEvento": []
+}
+
+LISTAR EVENTOS E CONFERIR A ATUALIZAÇÃO
+- [Uploading[{"idEvento":1,"nomeEvento":"Global Counter Strike 2 Championship","setorEvento":"Gaming","tweetsEvento":[{"idTweet":1,"textTweet":"Great presentations and workshops at #TechConf2024!","likeCountTweet":120,"replyCountTweet":15,"retweetsCountTweet":28,"langTweet":"en"},{"idTweet":2,"textTweet":"Learning a lot about AI and machine learning here.","likeCountTweet":45,"replyCountTweet":3,"retweetsCountTweet":6,"langTweet":"en"},{"idTweet":3,"textTweet":"Met some inspiring people in the tech industry.","likeCountTweet":32,"replyCountTweet":2,"retweetsCountTweet":4,"langTweet":"en"}]},{"idEvento":2,"nomeEvento":"Global E-sports Championship","setorEvento":"Gaming","tweetsEvento":[{"idTweet":4,"textTweet":"Can't wait to see the finals of the GEC! #GEC2024","likeCountTweet":5200,"replyCountTweet":780,"retweetsCountTweet":1450,"langTweet":"en"},{"idTweet":5,"textTweet":"Who do you think will win the championship? #TeamFire  #TeamStorm","likeCountTweet":2100,"replyCountTweet":425,"retweetsCountTweet":870,"langTweet":"en"},{"idTweet":6,"textTweet":"Amazing atmosphere at the event! So much energy from the crowd. #GECRocks","likeCountTweet":1800,"replyCountTweet":120,"retweetsCountTweet":350,"langTweet":"en"}]}] responseGetEventos2.json…]()
+
+LISTAR OS EVENTOS APÓS DELETAR O EVENTO ID 1
+- [Upload[{"idEvento":1,"nomeEvento":"Global Counter Strike 2 Championship","setorEvento":"Gaming","tweetsEvento":[{"idTweet":1,"textTweet":"Great presentations and workshops at #TechConf2024!","likeCountTweet":120,"replyCountTweet":15,"retweetsCountTweet":28,"langTweet":"en"},{"idTweet":2,"textTweet":"Learning a lot about AI and machine learning here.","likeCountTweet":45,"replyCountTweet":3,"retweetsCountTweet":6,"langTweet":"en"},{"idTweet":3,"textTweet":"Met some inspiring people in the tech industry.","likeCountTweet":32,"replyCountTweet":2,"retweetsCountTweet":4,"langTweet":"en"}]}]ing response3.json…]()
+
+LISTAR TODOS OS TWEETS DOS EVENTOS (Obs: como apagamos um dos eventos, teremos apenas os tweets de 1 evento)
+- [Upload[{"idTweet":1,"textTweet":"Great presentations and workshops at #TechConf2024!","likeCountTweet":120,"replyCountTweet":15,"retweetsCountTweet":28,"langTweet":"en"},{"idTweet":2,"textTweet":"Learning a lot about AI and machine learning here.","likeCountTweet":45,"replyCountTweet":3,"retweetsCountTweet":6,"langTweet":"en"},{"idTweet":3,"textTweet":"Met some inspiring people in the tech industry.","likeCountTweet":32,"replyCountTweet":2,"retweetsCountTweet":4,"langTweet":"en"}]ing response4.json…]()
