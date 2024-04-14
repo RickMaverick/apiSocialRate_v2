@@ -1,4 +1,4 @@
-[response4.json](https://github.com/RickMaverick/apiSocialRate_v2/files/14964408/response4.json)[response3.json](https://github.com/RickMaverick/apiSocialRate_v2/files/14964292/response3.json)[responseGetEventos2.json](https://github.com/RickMaverick/apiSocialRate_v2/files/14964275/responseGetEventos2.json)# SOCIAL RATE
+# SOCIAL RATE
 
 ## INTEGRANTES DO GRUPO:
 
@@ -38,6 +38,9 @@ ENDPOINTS DA CLASSE TWEET:
 - DELETE http://localhost:8080/api/tweet/{id} 
 
 ## ANEXOS
+ACESSO AO PITCH:
+- https://www.youtube.com/watch?v=5DyYL7Z3cz0
+
 JSONS PARA TESTE:
 ### Criando 2 eventos distintos:
 
